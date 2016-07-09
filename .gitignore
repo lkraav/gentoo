@@ -3,3 +3,4 @@
 *.orig
 *.patch
 *.swp
+metadata/md5-cache/
