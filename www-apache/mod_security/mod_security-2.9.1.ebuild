@@ -78,7 +78,7 @@ src_install() {
 	insinto "${APACHE_MODULES_CONFDIR}"
 	doins "${T}"/79_modsecurity.conf
 
-	dodoc CHANGES NOTICE README.TXT README_WINDOWS.TXT
+	dodoc CHANGES NOTICE README.TXT README_WINDOWS.TXT modsecurity.conf-recommended unicode.mapping
 
 	dohtml -r doc/*
 
