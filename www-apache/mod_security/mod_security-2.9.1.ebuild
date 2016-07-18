@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=6
 
-inherit apache-module
+inherit autotools apache-module eutils
 
 MY_PN=modsecurity-apache
 MY_PV=${PV/_rc/-rc}
@@ -39,6 +39,8 @@ RESTRICT=test
 need_apache2
 
 src_prepare() {
+	default
+
 	cp "${FILESDIR}"/modsecurity-2.7.conf "${T}"/79_modsecurity.conf || die
 }
 
