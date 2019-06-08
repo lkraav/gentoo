@@ -13,7 +13,11 @@ LICENSE="|| ( IDEA IDEA_Academic IDEA_Classroom IDEA_OpenSource IDEA_Personal )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND=">=virtual/jre-1.8"
+IUSE="gnome-keyring"
+RDEPEND=">=virtual/jre-1.8
+	dev-libs/libdbusmenu
+	gnome-keyring? ( gnome-base/gnome-keyring )
+"
 
 QA_PREBUILT="opt/${PN}/*"
 
